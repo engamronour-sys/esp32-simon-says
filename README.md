@@ -13,6 +13,8 @@ I built this as a small side project, and a few friends enjoyed playing it, so h
 - A wrong button, or 3 seconds without a press, ends the game. A low buzz sounds, the LED you should have pressed blinks 3 times, then all LEDs blink once for every round you completed.
 - The level and score are also printed to the serial monitor at 115200 baud.
 
+![gameplay](docs/gameplay.gif)
+
 ## Hardware
 
 | Qty | Part | Notes |
@@ -96,7 +98,6 @@ These all came up while building this one.
 ## Acknowledgements
 
 - The game idea comes from the Instructables project [Arduino - Simple Simon Says Game](https://www.instructables.com/Arduino-Simple-Simon-Says-Game/) (2013), rewritten for three buttons on an ESP32.
-- Code and documentation were drafted with help from Claude (Anthropic).
 
 ## License
 
