@@ -1,0 +1,467 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 832 300" width="832" height="300" role="img" aria-labelledby="bbTitle bbDesc">
+<title id="bbTitle">Breadboard wiring for the 3-button Simon Says</title>
+<desc id="bbDesc">LED long legs in c5, c15 and c25 with short legs in c6, c16, c26. 330 ohm resistors from a6, a16, a26 to the minus rail. Buttons in c9 and c11, c19 and c21, c29 and c31, with short wires from a11, a21, a31 to the minus rail. Buzzer plus leg in c36, other leg in c39 with a wire from a39 to the minus rail. ESP32 wires: GPIO25 to e5, GPIO32 to e9, GPIO26 to e15, GPIO33 to e19, GPIO27 to e25, GPIO14 to e29, GPIO13 to e36, GND to the minus rail.</desc>
+<style>
+.bb-board{fill:#FFFFFF;stroke:#C7D0CC;stroke-width:1.5}.bb-gap{fill:#E4EAE7}.bb-hole{fill:#B4BFBA}
+.bb-num{font-family:Menlo,Consolas,monospace;font-size:9.5px;fill:#55635E;text-anchor:middle;opacity:.6;paint-order:stroke;stroke:#FFFFFF;stroke-width:3px;stroke-linejoin:round}
+.bb-num.used{opacity:1;fill:#15201C;font-weight:600;font-size:10px}
+.bb-letter{font-family:Menlo,Consolas,monospace;font-size:10px;fill:#55635E;text-anchor:middle}
+.bb-letter.neg{fill:#2F6FD6;font-size:13px;font-weight:600}.bb-letter.pos{fill:#D64545;font-size:12px;font-weight:600}
+.bb-tiny{font-family:Menlo,Consolas,monospace;font-size:9.5px;fill:#55635E}.bb-tiny.end{text-anchor:end}
+.bb-neg-line{stroke:#2F6FD6;stroke-width:1.5}.bb-pos-line{stroke:#D64545;stroke-width:1.5;opacity:.5}
+.bb-led{fill:#FFF3C4;stroke:#B28F2C;stroke-width:1.6}.bb-led-leg{fill:#B28F2C}
+.bb-plus{font-family:Menlo,Consolas,monospace;font-size:11px;font-weight:700;fill:#6B5200;text-anchor:middle}.bb-plus.on-dark{fill:#EEF2F0}
+.bb-res-leg{stroke:#A9B3AF;stroke-width:1.6}.bb-res{fill:#D9C08C;stroke:#9C8350;stroke-width:1}
+.band-or{fill:#E07A1F}.band-br{fill:#6E4219}.band-au{fill:#C9A23A}.bb-res-end{fill:#A9B3AF}
+.bb-part{fill:#2A302D;stroke:#0A0D0C;stroke-width:1.5}.bb-cap{fill:#0E1211;stroke:#0A0D0C;stroke-width:1}.bb-metal{fill:#A9B3AF}
+.w{stroke-width:3.6;stroke-linecap:round;fill:none}
+.w-led{stroke:#E07A1F}.w-btn{stroke:#2F6FD6}.w-buz{stroke:#8A4FD1}.w-gnd{stroke:#1C2320}
+.plug-led{fill:#E07A1F}.plug-btn{fill:#2F6FD6}.plug-buz{fill:#8A4FD1}.plug-gnd{fill:#1C2320}
+.pin{fill:#FFFFFF;stroke-width:1.6}.pin-led{stroke:#E07A1F}.pin-btn{stroke:#2F6FD6}.pin-buz{stroke:#8A4FD1}.pin-gnd{stroke:#1C2320}
+.pin-text{font-family:Menlo,Consolas,monospace;font-size:11px;font-weight:600;fill:#15201C;text-anchor:middle}
+.bb-label{font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:600;fill:#15201C;text-anchor:middle}
+.bb-sublabel{font-family:Menlo,Consolas,monospace;font-size:10px;fill:#55635E;text-anchor:middle}
+</style>
+<rect width="832" height="300" fill="#FFFFFF"/>
+<rect x="28" y="60" width="776" height="188" rx="8" class="bb-board"/>
+<rect x="28" y="60" width="776" height="15" class="bb-gap"/>
+<text x="582" y="71" class="bb-tiny">middle gap</text>
+<line x1="56" y1="194" x2="790" y2="194" class="bb-neg-line"/>
+<line x1="56" y1="236" x2="790" y2="236" class="bb-pos-line"/>
+<text x="44" y="108" class="bb-letter">e</text>
+<text x="44" y="126" class="bb-letter">d</text>
+<text x="44" y="144" class="bb-letter">c</text>
+<text x="44" y="162" class="bb-letter">b</text>
+<text x="44" y="180" class="bb-letter">a</text>
+<text x="44" y="210" class="bb-letter neg">−</text>
+<text x="44" y="228" class="bb-letter pos">+</text>
+<text x="796" y="228" class="bb-tiny end">+ rail: not used</text>
+<rect x="57" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="57" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="75" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="93" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="111" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="129" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="147" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="165" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="183" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="201" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="219" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="237" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="255" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="273" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="291" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="309" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="327" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="345" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="363" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="381" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="399" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="417" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="435" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="453" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="471" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="489" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="507" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="525" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="543" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="561" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="579" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="597" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="615" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="633" y="221" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="651" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="669" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="687" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="705" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="723" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="741" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="759" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="101" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="119" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="137" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="155" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="173" width="6" height="6" rx="1.2" class="bb-hole"/>
+<rect x="777" y="203" width="6" height="6" rx="1.2" class="bb-hole"/>
+<path d="M 150 130.62 A 13 13 0 1 0 150 149.38 Z" class="bb-led"/>
+<circle cx="132" cy="140" r="2.6" class="bb-led-leg"/>
+<circle cx="150" cy="140" r="2.6" class="bb-led-leg"/>
+<text x="132" y="136" class="bb-plus">+</text>
+<line x1="150" y1="176" x2="150" y2="206" class="bb-res-leg"/>
+<rect x="145.5" y="182" width="9" height="18" rx="3" class="bb-res"/>
+<rect x="145.5" y="185" width="9" height="2" class="band-or"/>
+<rect x="145.5" y="189" width="9" height="2" class="band-or"/>
+<rect x="145.5" y="193" width="9" height="2" class="band-br"/>
+<rect x="145.5" y="196.5" width="9" height="2" class="band-au"/>
+<circle cx="150" cy="176" r="2.4" class="bb-res-end"/>
+<circle cx="150" cy="206" r="2.4" class="bb-res-end"/>
+<rect x="201" y="120" width="42" height="40" rx="4" class="bb-part"/>
+<circle cx="222" cy="140" r="10.5" class="bb-cap"/>
+<circle cx="204" cy="140" r="3" class="bb-metal"/>
+<circle cx="240" cy="140" r="3" class="bb-metal"/>
+<line x1="240" y1="176" x2="240" y2="206" class="w w-gnd"/>
+<circle cx="240" cy="176" r="3.6" class="plug-gnd"/>
+<circle cx="240" cy="206" r="3.6" class="plug-gnd"/>
+<path d="M 330 130.62 A 13 13 0 1 0 330 149.38 Z" class="bb-led"/>
+<circle cx="312" cy="140" r="2.6" class="bb-led-leg"/>
+<circle cx="330" cy="140" r="2.6" class="bb-led-leg"/>
+<text x="312" y="136" class="bb-plus">+</text>
+<line x1="330" y1="176" x2="330" y2="206" class="bb-res-leg"/>
+<rect x="325.5" y="182" width="9" height="18" rx="3" class="bb-res"/>
+<rect x="325.5" y="185" width="9" height="2" class="band-or"/>
+<rect x="325.5" y="189" width="9" height="2" class="band-or"/>
+<rect x="325.5" y="193" width="9" height="2" class="band-br"/>
+<rect x="325.5" y="196.5" width="9" height="2" class="band-au"/>
+<circle cx="330" cy="176" r="2.4" class="bb-res-end"/>
+<circle cx="330" cy="206" r="2.4" class="bb-res-end"/>
+<rect x="381" y="120" width="42" height="40" rx="4" class="bb-part"/>
+<circle cx="402" cy="140" r="10.5" class="bb-cap"/>
+<circle cx="384" cy="140" r="3" class="bb-metal"/>
+<circle cx="420" cy="140" r="3" class="bb-metal"/>
+<line x1="420" y1="176" x2="420" y2="206" class="w w-gnd"/>
+<circle cx="420" cy="176" r="3.6" class="plug-gnd"/>
+<circle cx="420" cy="206" r="3.6" class="plug-gnd"/>
+<path d="M 510 130.62 A 13 13 0 1 0 510 149.38 Z" class="bb-led"/>
+<circle cx="492" cy="140" r="2.6" class="bb-led-leg"/>
+<circle cx="510" cy="140" r="2.6" class="bb-led-leg"/>
+<text x="492" y="136" class="bb-plus">+</text>
+<line x1="510" y1="176" x2="510" y2="206" class="bb-res-leg"/>
+<rect x="505.5" y="182" width="9" height="18" rx="3" class="bb-res"/>
+<rect x="505.5" y="185" width="9" height="2" class="band-or"/>
+<rect x="505.5" y="189" width="9" height="2" class="band-or"/>
+<rect x="505.5" y="193" width="9" height="2" class="band-br"/>
+<rect x="505.5" y="196.5" width="9" height="2" class="band-au"/>
+<circle cx="510" cy="176" r="2.4" class="bb-res-end"/>
+<circle cx="510" cy="206" r="2.4" class="bb-res-end"/>
+<rect x="561" y="120" width="42" height="40" rx="4" class="bb-part"/>
+<circle cx="582" cy="140" r="10.5" class="bb-cap"/>
+<circle cx="564" cy="140" r="3" class="bb-metal"/>
+<circle cx="600" cy="140" r="3" class="bb-metal"/>
+<line x1="600" y1="176" x2="600" y2="206" class="w w-gnd"/>
+<circle cx="600" cy="176" r="3.6" class="plug-gnd"/>
+<circle cx="600" cy="206" r="3.6" class="plug-gnd"/>
+<circle cx="717.0" cy="140" r="31" class="bb-part"/>
+<circle cx="717.0" cy="140" r="4.5" class="bb-cap"/>
+<circle cx="690" cy="140" r="3" class="bb-metal"/>
+<circle cx="744" cy="140" r="3" class="bb-metal"/>
+<text x="700" y="133" class="bb-plus on-dark">+</text>
+<line x1="744" y1="176" x2="744" y2="206" class="w w-gnd"/>
+<circle cx="744" cy="176" r="3.6" class="plug-gnd"/>
+<circle cx="744" cy="206" r="3.6" class="plug-gnd"/>
+<line x1="132" y1="39" x2="132" y2="104" class="w w-led"/>
+<circle cx="132" cy="104" r="3.8" class="plug-led"/>
+<rect x="103" y="17" width="58" height="22" rx="5" class="pin pin-led"/>
+<text x="132" y="32" class="pin-text">GPIO 25</text>
+<line x1="204" y1="39" x2="204" y2="104" class="w w-btn"/>
+<circle cx="204" cy="104" r="3.8" class="plug-btn"/>
+<rect x="175" y="17" width="58" height="22" rx="5" class="pin pin-btn"/>
+<text x="204" y="32" class="pin-text">GPIO 32</text>
+<line x1="312" y1="39" x2="312" y2="104" class="w w-led"/>
+<circle cx="312" cy="104" r="3.8" class="plug-led"/>
+<rect x="283" y="17" width="58" height="22" rx="5" class="pin pin-led"/>
+<text x="312" y="32" class="pin-text">GPIO 26</text>
+<line x1="384" y1="39" x2="384" y2="104" class="w w-btn"/>
+<circle cx="384" cy="104" r="3.8" class="plug-btn"/>
+<rect x="355" y="17" width="58" height="22" rx="5" class="pin pin-btn"/>
+<text x="384" y="32" class="pin-text">GPIO 33</text>
+<line x1="492" y1="39" x2="492" y2="104" class="w w-led"/>
+<circle cx="492" cy="104" r="3.8" class="plug-led"/>
+<rect x="463" y="17" width="58" height="22" rx="5" class="pin pin-led"/>
+<text x="492" y="32" class="pin-text">GPIO 27</text>
+<line x1="564" y1="39" x2="564" y2="104" class="w w-btn"/>
+<circle cx="564" cy="104" r="3.8" class="plug-btn"/>
+<rect x="535" y="17" width="58" height="22" rx="5" class="pin pin-btn"/>
+<text x="564" y="32" class="pin-text">GPIO 14</text>
+<line x1="690" y1="39" x2="690" y2="104" class="w w-buz"/>
+<circle cx="690" cy="104" r="3.8" class="plug-buz"/>
+<rect x="661" y="17" width="58" height="22" rx="5" class="pin pin-buz"/>
+<text x="690" y="32" class="pin-text">GPIO 13</text>
+<line x1="780" y1="39" x2="780" y2="206" class="w w-gnd"/>
+<circle cx="780" cy="206" r="3.8" class="plug-gnd"/>
+<rect x="758" y="17" width="44" height="22" rx="5" class="pin pin-gnd"/>
+<text x="780" y="32" class="pin-text">GND</text>
+<text x="14" y="32" class="bb-tiny">ESP32</text>
+<text x="60" y="92" class="bb-num">1</text>
+<text x="78" y="92" class="bb-num">2</text>
+<text x="96" y="92" class="bb-num">3</text>
+<text x="114" y="92" class="bb-num">4</text>
+<text x="132" y="92" class="bb-num used">5</text>
+<text x="150" y="92" class="bb-num used">6</text>
+<text x="168" y="92" class="bb-num">7</text>
+<text x="186" y="92" class="bb-num">8</text>
+<text x="204" y="92" class="bb-num used">9</text>
+<text x="222" y="92" class="bb-num">10</text>
+<text x="240" y="92" class="bb-num used">11</text>
+<text x="258" y="92" class="bb-num">12</text>
+<text x="276" y="92" class="bb-num">13</text>
+<text x="294" y="92" class="bb-num">14</text>
+<text x="312" y="92" class="bb-num used">15</text>
+<text x="330" y="92" class="bb-num used">16</text>
+<text x="348" y="92" class="bb-num">17</text>
+<text x="366" y="92" class="bb-num">18</text>
+<text x="384" y="92" class="bb-num used">19</text>
+<text x="402" y="92" class="bb-num">20</text>
+<text x="420" y="92" class="bb-num used">21</text>
+<text x="438" y="92" class="bb-num">22</text>
+<text x="456" y="92" class="bb-num">23</text>
+<text x="474" y="92" class="bb-num">24</text>
+<text x="492" y="92" class="bb-num used">25</text>
+<text x="510" y="92" class="bb-num used">26</text>
+<text x="528" y="92" class="bb-num">27</text>
+<text x="546" y="92" class="bb-num">28</text>
+<text x="564" y="92" class="bb-num used">29</text>
+<text x="582" y="92" class="bb-num">30</text>
+<text x="600" y="92" class="bb-num used">31</text>
+<text x="618" y="92" class="bb-num">32</text>
+<text x="636" y="92" class="bb-num">33</text>
+<text x="654" y="92" class="bb-num">34</text>
+<text x="672" y="92" class="bb-num">35</text>
+<text x="690" y="92" class="bb-num used">36</text>
+<text x="708" y="92" class="bb-num">37</text>
+<text x="726" y="92" class="bb-num">38</text>
+<text x="744" y="92" class="bb-num used">39</text>
+<text x="762" y="92" class="bb-num">40</text>
+<text x="780" y="92" class="bb-num">41</text>
+<text x="141" y="268" class="bb-label">LED 1</text>
+<text x="141" y="284" class="bb-sublabel">+ 330 Ω</text>
+<text x="222" y="268" class="bb-label">Button 1</text>
+<text x="321" y="268" class="bb-label">LED 2</text>
+<text x="321" y="284" class="bb-sublabel">+ 330 Ω</text>
+<text x="402" y="268" class="bb-label">Button 2</text>
+<text x="501" y="268" class="bb-label">LED 3</text>
+<text x="501" y="284" class="bb-sublabel">+ 330 Ω</text>
+<text x="582" y="268" class="bb-label">Button 3</text>
+<text x="717.0" y="268" class="bb-label">Buzzer</text>
+</svg>

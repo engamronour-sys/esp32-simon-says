@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 600" width="780" height="600" role="img" aria-labelledby="t d">
+<title id="t">ESP32 Simon Says schematic</title>
+<desc id="d">GPIO25, 26 and 27 each drive an LED through a 330 ohm resistor to ground. GPIO32, 33 and 14 each go through a push button to ground. GPIO13 drives the buzzer plus pin; the buzzer minus pin goes to ground.</desc>
+<style>
+.ln{stroke:#24292F;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.fill{fill:#24292F}
+.lbl{font-family:Helvetica,Arial,sans-serif;font-size:13px;fill:#24292F;text-anchor:middle}
+.pin{font-family:Menlo,Consolas,monospace;font-size:13px;fill:#24292F;text-anchor:end}
+.chip{font-family:Helvetica,Arial,sans-serif;fill:#24292F}
+.note{font-family:Helvetica,Arial,sans-serif;font-size:13px;fill:#57606A}
+</style>
+<rect width="780" height="600" fill="#FFFFFF"/>
+<rect x="30" y="40" width="200" height="466" rx="6" class="ln"/>
+<text x="46" y="66" class="chip" font-size="18" font-weight="700">ESP32</text>
+<text x="46" y="84" class="chip" font-size="12">DevKitC V4</text>
+<text x="46" y="100" class="chip" font-size="12">WROOM-32D</text>
+<line x1="720" y1="70" x2="720" y2="502" class="ln"/>
+<line x1="704" y1="502" x2="736" y2="502" class="ln"/>
+<line x1="710" y1="509" x2="730" y2="509" class="ln"/>
+<line x1="716" y1="516" x2="724" y2="516" class="ln"/>
+<text x="730" y="60" class="lbl" text-anchor="start" style="text-anchor:start">GND</text>
+<text x="222" y="74" class="pin">GPIO25</text>
+<line x1="230" y1="70" x2="380" y2="70" class="ln"/>
+<polygon points="380,58 380,82 402,70" class="ln"/>
+<line x1="402" y1="58" x2="402" y2="82" class="ln"/>
+<line x1="390" y1="55" x2="398" y2="45" class="ln" stroke-width="1.5"/>
+<polygon points="398,45 392,46 397,51" class="fill"/>
+<line x1="398" y1="55" x2="406" y2="45" class="ln" stroke-width="1.5"/>
+<polygon points="406,45 400,46 405,51" class="fill"/>
+<line x1="402" y1="70" x2="470" y2="70" class="ln"/>
+<path d="M470,70 l5,-8 l10,16 l10,-16 l10,16 l10,-16 l10,16 l10,-16 l10,16 l5,-8" class="ln"/>
+<line x1="550" y1="70" x2="720" y2="70" class="ln"/>
+<text x="391" y="100" class="lbl">LED · right</text>
+<text x="510" y="100" class="lbl">330 Ω</text>
+<text x="222" y="132" class="pin">GPIO26</text>
+<circle cx="720" cy="128" r="3.5" class="fill"/>
+<line x1="230" y1="128" x2="380" y2="128" class="ln"/>
+<polygon points="380,116 380,140 402,128" class="ln"/>
+<line x1="402" y1="116" x2="402" y2="140" class="ln"/>
+<line x1="390" y1="113" x2="398" y2="103" class="ln" stroke-width="1.5"/>
+<polygon points="398,103 392,104 397,109" class="fill"/>
+<line x1="398" y1="113" x2="406" y2="103" class="ln" stroke-width="1.5"/>
+<polygon points="406,103 400,104 405,109" class="fill"/>
+<line x1="402" y1="128" x2="470" y2="128" class="ln"/>
+<path d="M470,128 l5,-8 l10,16 l10,-16 l10,16 l10,-16 l10,16 l10,-16 l10,16 l5,-8" class="ln"/>
+<line x1="550" y1="128" x2="720" y2="128" class="ln"/>
+<text x="391" y="158" class="lbl">LED · middle</text>
+<text x="510" y="158" class="lbl">330 Ω</text>
+<text x="222" y="190" class="pin">GPIO27</text>
+<circle cx="720" cy="186" r="3.5" class="fill"/>
+<line x1="230" y1="186" x2="380" y2="186" class="ln"/>
+<polygon points="380,174 380,198 402,186" class="ln"/>
+<line x1="402" y1="174" x2="402" y2="198" class="ln"/>
+<line x1="390" y1="171" x2="398" y2="161" class="ln" stroke-width="1.5"/>
+<polygon points="398,161 392,162 397,167" class="fill"/>
+<line x1="398" y1="171" x2="406" y2="161" class="ln" stroke-width="1.5"/>
+<polygon points="406,161 400,162 405,167" class="fill"/>
+<line x1="402" y1="186" x2="470" y2="186" class="ln"/>
+<path d="M470,186 l5,-8 l10,16 l10,-16 l10,16 l10,-16 l10,16 l10,-16 l10,16 l5,-8" class="ln"/>
+<line x1="550" y1="186" x2="720" y2="186" class="ln"/>
+<text x="391" y="216" class="lbl">LED · left</text>
+<text x="510" y="216" class="lbl">330 Ω</text>
+<text x="222" y="248" class="pin">GPIO32</text>
+<circle cx="720" cy="244" r="3.5" class="fill"/>
+<line x1="230" y1="244" x2="440.5" y2="244" class="ln"/>
+<circle cx="444" cy="244" r="3.5" fill="#FFFFFF" class="ln"/>
+<circle cx="496" cy="244" r="3.5" fill="#FFFFFF" class="ln"/>
+<line x1="438" y1="232" x2="502" y2="232" class="ln"/>
+<line x1="470" y1="232" x2="470" y2="220" class="ln"/>
+<line x1="461" y1="220" x2="479" y2="220" class="ln"/>
+<line x1="499.5" y1="244" x2="720" y2="244" class="ln"/>
+<text x="470" y="270" class="lbl">Button · right</text>
+<text x="222" y="306" class="pin">GPIO33</text>
+<circle cx="720" cy="302" r="3.5" class="fill"/>
+<line x1="230" y1="302" x2="440.5" y2="302" class="ln"/>
+<circle cx="444" cy="302" r="3.5" fill="#FFFFFF" class="ln"/>
+<circle cx="496" cy="302" r="3.5" fill="#FFFFFF" class="ln"/>
+<line x1="438" y1="290" x2="502" y2="290" class="ln"/>
+<line x1="470" y1="290" x2="470" y2="278" class="ln"/>
+<line x1="461" y1="278" x2="479" y2="278" class="ln"/>
+<line x1="499.5" y1="302" x2="720" y2="302" class="ln"/>
+<text x="470" y="328" class="lbl">Button · middle</text>
+<text x="222" y="364" class="pin">GPIO14</text>
+<circle cx="720" cy="360" r="3.5" class="fill"/>
+<line x1="230" y1="360" x2="440.5" y2="360" class="ln"/>
+<circle cx="444" cy="360" r="3.5" fill="#FFFFFF" class="ln"/>
+<circle cx="496" cy="360" r="3.5" fill="#FFFFFF" class="ln"/>
+<line x1="438" y1="348" x2="502" y2="348" class="ln"/>
+<line x1="470" y1="348" x2="470" y2="336" class="ln"/>
+<line x1="461" y1="336" x2="479" y2="336" class="ln"/>
+<line x1="499.5" y1="360" x2="720" y2="360" class="ln"/>
+<text x="470" y="386" class="lbl">Button · left</text>
+<text x="222" y="422" class="pin">GPIO13</text>
+<circle cx="720" cy="418" r="3.5" class="fill"/>
+<line x1="230" y1="418" x2="452" y2="418" class="ln"/>
+<rect x="452" y="405" width="36" height="26" rx="3" fill="#FFFFFF" class="ln"/>
+<text x="470" y="423" class="lbl" font-size="12" font-weight="700">BZ</text>
+<text x="444" y="410" class="lbl" font-weight="700">+</text>
+<line x1="488" y1="418" x2="720" y2="418" class="ln"/>
+<text x="470" y="450" class="lbl">Buzzer</text>
+<text x="222" y="480" class="pin">GND</text>
+<circle cx="720" cy="476" r="3.5" class="fill"/>
+<line x1="230" y1="476" x2="720" y2="476" class="ln"/>
+<text x="30" y="556" class="note">Buttons use the ESP32's internal pull-ups (INPUT_PULLUP): released = HIGH, pressed = LOW.</text>
+<text x="30" y="576" class="note">Each LED sits next to its button: 25 + 32 (right), 26 + 33 (middle), 27 + 14 (left).</text>
+</svg>

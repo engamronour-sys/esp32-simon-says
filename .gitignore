@@ -1,0 +1,12 @@
+# Build output
+build/
+*.bin
+*.elf
+*.map
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
